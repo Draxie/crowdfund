@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+:root {
+  --background-color: #F2F2F2;
+  --nav-text-color: #FFFFFF;
+  --forms-bg-color: #FFFFFF;
+  --button-color: #147A73;
+  --progress-tracker-and-pledge-color: #3CB3AB;
+  --faded-text-color: #7A7A7A;
+  --border-color: rgb(196, 196, 196);
+}
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Commissioner';
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: url(/images/image-hero-desktop.jpg);
+  background-size: 100vw 28vw;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+nav {
+  background: none;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 10vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--nav-text-color);
+}
+
+nav .navigation {
+  width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+nav .navigation p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+nav .burger-menu {
+  display: none;
+}
+
+.drop-down-nav {
+  display: none;
+}
+
+.wrapper {
+  max-width: 100vw;
+  height: auto;
+  margin-top: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .back-project {
+  width: 730px;
+  height: 270px;
+  background-color: var(--forms-bg-color);
+  border-radius: 8px;
+}
+
+.wrapper .back-project .icon-wrapper {
+  position: absolute;
+  width: 730px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-28px);
+          transform: translateY(-28px);
+}
+
+.wrapper .back-project .icon-wrapper .icon {
+  margin-inline: auto;
+}
+
+.wrapper .back-project .intro-text-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.wrapper .back-project .back-and-bookmark-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 7%;
+  margin-top: 40px;
+}
+
+.wrapper .back-project .back-and-bookmark-buttons .back-button {
+  width: 205px;
+  height: 55px;
+  border: 0px;
+  outline: none;
+  border-radius: 33.5px;
+  background-color: var(--button-color);
+  color: white;
+}
+
+.wrapper .back-project .back-and-bookmark-buttons .back-button:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
+}
+
+.wrapper .back-project .back-and-bookmark-buttons .bookmark-button {
+  width: 58px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px;
+  outline: none;
+  border-radius: 33.5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 1s width;
+  transition: 1s width;
+}
+
+.wrapper .back-project .back-and-bookmark-buttons .bookmark-button p {
+  margin-left: 2px;
+}
+
+.wrapper .back-project .back-and-bookmark-buttons .bookmark-button:hover {
+  width: 180px;
+}
+
+.wrapper .numbers-and-bar {
+  margin-top: 25px;
+  width: 730px;
+  background-color: var(--forms-bg-color);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 50px;
+}
+
+.wrapper .numbers-and-bar .numbers {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .numbers-and-bar .numbers h1 {
+  margin: 0px;
+  margin-top: 10px;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.wrapper .numbers-and-bar .numbers p {
+  position: relative;
+  top: -5px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  color: var(--faded-text-color);
+}
+
+.wrapper .numbers-and-bar .numbers .backers {
+  border-inline: .5px solid;
+  border-color: var(--border-color);
+  height: 80px;
+}
+
+.wrapper .numbers-and-bar .progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: var(--background-color);
+  border-radius: 33.5px;
+  margin-block: 30px;
+}
+
+.wrapper .numbers-and-bar .progress-bar .progress-tracker {
+  width: 75%;
+  height: 100%;
+  background-color: var(--progress-tracker-and-pledge-color);
+  border-radius: 33.5px;
+}
+
+.wrapper .about-and-plans {
+  background-color: var(--forms-bg-color);
+  width: 730px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 48px;
+}
+
+.wrapper .about-and-plans h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.wrapper .about-and-plans p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--faded-text-color);
+}
+
+.wrapper .about-and-plans .plans .plan-name-and-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .about-and-plans .plans .plan-name-and-price p {
+  margin: 0px;
+  color: var(--progress-tracker-and-pledge-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.wrapper .about-and-plans .plans .pieces-left-and-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .about-and-plans .plans .pieces-left-and-select .amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .about-and-plans .plans .pieces-left-and-select .amount p {
+  margin: 0px;
+}
+
+.wrapper .about-and-plans .plans .pieces-left-and-select .amount h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.wrapper .about-and-plans .plans .pieces-left-and-select .select-reward-button {
+  background-color: var(--button-color);
+  border-radius: 33.5px;
+  border: 0px;
+  outline: none;
+  width: 160px;
+  height: 60px;
+  color: var(--nav-text-color);
+  font-weight: 700;
+}
+
+.wrapper .about-and-plans .plans .pieces-left-and-select .select-reward-button:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
+}
+
+.wrapper .about-and-plans .plans .plan {
+  border: .5px solid;
+  border-color: var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding-inline: 30px;
+}
+
+.wrapper .about-and-plans .plans .out-of-stock {
+  border: 0px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.wrapper .about-and-plans .plans .out-of-stock .select-reward-button {
+  background-color: black;
+}
+
+.back-project-form {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  z-index: 300;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.back-project-form .paying-form {
+  background-color: var(--forms-bg-color);
+  margin-top: 100px;
+  width: 730px;
+  height: 1000px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px;
+}
+
+.closed {
+  display: none;
+}
+
+@media screen and (max-width: 830px) {
+  body {
+    background-image: url(/images/image-hero-mobile.jpg);
+    background-size: 100% 18%;
+  }
+  .wrapper {
+    margin-top: 200px;
+  }
+  .wrapper .back-project {
+    width: 90%;
+  }
+  .wrapper .back-project .icon-wrapper {
+    width: 90%;
+  }
+  .wrapper .numbers-and-bar {
+    margin-top: 25px;
+    width: 90%;
+  }
+  .wrapper .about-and-plans {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  body {
+    background-image: url(/images/image-hero-mobile.jpg);
+    background-size: 100% 18%;
+  }
+  nav {
+    background: none;
+  }
+  nav .navigation {
+    display: none !important;
+  }
+  nav .burger-menu {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  .drop-down-nav {
+    z-index: 20;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #020024;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(90%, rgba(0, 0, 0, 0)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
+  }
+  .drop-down-nav .option-wrapper {
+    width: 90%;
+    height: 200px;
+    border-radius: 8px;
+    background-color: var(--forms-bg-color);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-inline: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 66px;
+  }
+  .drop-down-nav .option-wrapper p:first-of-type {
+    border: 0px;
+  }
+  .drop-down-nav .option-wrapper p {
+    border-top: .1px solid;
+    border-color: var(--border-color);
+    margin: 0px;
+  }
+  .wrapper {
+    margin-top: 200px;
+  }
+  .wrapper .back-project .intro-text-wrapper h1 {
+    font-size: 20px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-inline: 40px;
+  }
+  .wrapper .back-project .intro-text-wrapper p {
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-inline: 20px;
+  }
+  .wrapper .numbers-and-bar {
+    margin-top: 25px;
+    width: 90%;
+  }
+  .wrapper .numbers-and-bar .numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .numbers-and-bar .numbers .backers {
+    border: 0px;
+    border-block: .1px solid;
+    border-color: var(--border-color);
+  }
+  .wrapper .about-and-plans {
+    width: 90%;
+    padding: 20px;
+  }
+  .wrapper .about-and-plans .about-text h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .wrapper .about-and-plans .about-text p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .wrapper .about-and-plans .plans .plan-name-and-price {
+    display: block !important;
+  }
+  .wrapper .about-and-plans .plans .plan-name-and-price h2 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 5px;
+  }
+  .wrapper .about-and-plans .plans .plan-name-and-price p {
+    font-size: 14px;
+  }
+  .wrapper .about-and-plans .plans .pieces-left-and-select {
+    display: block;
+  }
+  .wrapper .about-and-plans .plans .pieces-left-and-select .amount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 15px;
+  }
+  .wrapper .about-and-plans .plans .pieces-left-and-select .amount p {
+    margin: 0px;
+  }
+  .wrapper .about-and-plans .plans .pieces-left-and-select .select-reward-button {
+    margin-bottom: 0px;
+  }
+  .wrapper .about-and-plans .plans .plan {
+    padding: 20px;
+  }
+  .wrapper .about-and-plans .plans .plan h2 {
+    margin-top: 0px;
+  }
+  .wrapper .about-and-plans .plans .plan p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

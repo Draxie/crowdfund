@@ -1,0 +1,100 @@
+.thanks-form {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 303;
+}
+
+.thanks-form .form-wrapper {
+  margin: 0px;
+  background-color: white;
+  width: 540px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 48px;
+}
+
+.thanks-form .form-wrapper img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.thanks-form .form-wrapper h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.thanks-form .form-wrapper p {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.thanks-form .form-wrapper button {
+  font-weight: 700;
+  border: 0px;
+  outline: 0px;
+  border-radius: 33.5px;
+  width: 105px;
+  height: 48px;
+  color: white;
+  background-color: var(--button-color);
+}
+
+.thanks-form .form-wrapper button:hover {
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+  .thanks-form .form-wrapper {
+    width: 90%;
+  }
+  .thanks-form .form-wrapper h1 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .thanks-form .form-wrapper p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .thanks-form .form-wrapper img {
+    width: 64px;
+  }
+}
+
+.closed {
+  display: none;
+}
+/*# sourceMappingURL=thanks-form.css.map */

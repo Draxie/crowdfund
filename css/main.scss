@@ -1,533 +1,507 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
 
-:root{
-    --background-color: #F2F2F2;
-    --nav-text-color: #FFFFFF;
-    --forms-bg-color: #FFFFFF;
-    --button-color: #147A73;
-    --progress-tracker-and-pledge-color: #3CB3AB;
-    --faded-text-color: #7A7A7A;
-    --border-color: rgb(196, 196, 196);
+:root {
+  --background-color: #f2f2f2;
+  --nav-text-color: #ffffff;
+  --forms-bg-color: #ffffff;
+  --button-color: #147a73;
+  --progress-tracker-and-pledge-color: #3cb3ab;
+  --faded-text-color: #7a7a7a;
+  --border-color: rgb(196, 196, 196);
 }
 
 body,
-html{
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Commissioner';
+html {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Commissioner";
 }
 
-body{
-    max-width: 100vw;
-    min-height: 100vh;
-    background-color: var(--background-color);
-    background-image: url(/images/image-hero-desktop.jpg);
-    background-size: 100vw 28vw;
-    background-repeat: no-repeat;
-    background-position: top center;
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: url(/images/image-hero-desktop.jpg);
+  background-size: 100vw 400px;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
-nav{
-    background: none;
-    max-width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding-inline: 10vw;
-    align-items: center;
+nav {
+  background: none;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-inline: 10vw;
+  align-items: center;
 
-    color: var(--nav-text-color);
+  color: var(--nav-text-color);
 
-    .navigation{
-        width: 300px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 10px;
-        text-align: center;
+  .navigation {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
 
-        p:hover{
-            cursor: pointer;
-            text-decoration: underline;
-            font-weight: bold;
-        }
+    p:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bold;
     }
+  }
 
-    .burger-menu{
-        display: none;
-    }
-}
-
-.drop-down-nav{
+  .burger-menu {
     display: none;
+  }
 }
 
-.wrapper{
-    max-width: 100vw;
-    height: auto;
-    margin-top: 240px;
+.drop-down-nav {
+  display: none;
+}
+
+.wrapper {
+  max-width: 100vw;
+  height: auto;
+  margin-top: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .back-project {
+    width: 730px;
+    height: 270px;
+    background-color: var(--forms-bg-color);
+    border-radius: 8px;
+
+    .icon-wrapper {
+      position: absolute;
+      width: 730px;
+      display: flex;
+      transform: translateY(-28px);
+
+      .icon {
+        margin-inline: auto;
+      }
+    }
+
+    .intro-text-wrapper {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .back-and-bookmark-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding-inline: 7%;
+      margin-top: 40px;
+
+      .back-button {
+        width: 205px;
+        height: 55px;
+        border: 0px;
+        outline: none;
+        border-radius: 33.5px;
+        background-color: var(--button-color);
+        color: white;
+        font-weight: 700;
+      }
+
+      .back-button:hover {
+        cursor: pointer;
+        filter: brightness(160%);
+      }
+
+      .bookmark-button {
+        width: 58px;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        border: 0px;
+        outline: none;
+        border-radius: 33.5px;
+        justify-content: space-between;
+        transition: 1s width;
+
+        p {
+          margin-right: 15px;
+          margin-left: 2px;
+          font-weight: 700;
+        }
+      }
+
+      .bookmarked {
+        svg {
+          circle {
+            fill: var(--button-color);
+          }
+
+          path {
+            fill: white;
+          }
+        }
+
+        p {
+          color: var(--button-color);
+        }
+      }
+
+      .bookmark-button:hover {
+        width: 190px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .numbers-and-bar {
+    margin-top: 25px;
+    width: 730px;
+    background-color: var(--forms-bg-color);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    padding-inline: 50px;
 
-    .back-project{
-        width: 730px;
-        height: 270px;
-        background-color: var(--forms-bg-color);
-        border-radius: 8px;
+    .numbers {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      text-align: center;
+      align-items: center;
 
-        .icon-wrapper{
-            position: absolute;
-            width: 730px;
-            display: flex;
-            transform: translateY(-28px);
+      h1 {
+        margin: 0px;
+        margin-top: 10px;
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 700;
+      }
 
-            .icon{
-                margin-inline: auto;
-            }
-        }
+      p {
+        position: relative;
+        top: -5px;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 400;
+        color: var(--faded-text-color);
+      }
 
-        .intro-text-wrapper{
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .back-and-bookmark-buttons{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            box-sizing: border-box;
-            padding-inline: 7%;
-            margin-top: 40px;
-
-            .back-button{
-                width: 205px;
-                height: 55px;
-                border: 0px;
-                outline: none;
-                border-radius: 33.5px;
-                background-color: var(--button-color);
-                color: white;
-            }
-
-            .back-button:hover{
-                cursor: pointer;
-                filter: brightness(160%);
-            }
-
-            .bookmark-button{
-                width: 58px;
-                overflow: hidden;
-                box-sizing: border-box;
-                padding: 0px;
-                padding-right: 20px;
-                display: flex;
-                flex-direction: row;
-                
-                align-items: center;
-                border: 0px;
-                outline: none;
-                border-radius: 33.5px;
-                justify-content: space-between;
-                transition: 1s width;
-
-                p{
-                    margin-left: 2px;
-                }
-            }
-
-            .bookmark-button:hover{
-                width: 180px;
-            }
-        }
+      .backers {
+        border-inline: 0.5px solid;
+        border-color: var(--border-color);
+        height: 80px;
+      }
     }
 
-    .numbers-and-bar{
-        margin-top: 25px;
-        width: 730px;
-        background-color: var(--forms-bg-color);
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background-color: var(--background-color);
+      border-radius: 33.5px;
+      margin-block: 30px;
+
+      .progress-tracker {
+        width: 75%;
+        max-width: 100%;
+        height: 100%;
+        background-color: var(--progress-tracker-and-pledge-color);
+        border-radius: 33.5px;
+      }
+    }
+  }
+
+  .about-and-plans {
+    background-color: var(--forms-bg-color);
+    width: 730px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 48px;
+
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 30px;
+      color: var(--faded-text-color);
+    }
+
+    .plans {
+      .plan-name-and-price {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          margin: 0px;
+          color: var(--progress-tracker-and-pledge-color);
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+
+      .pieces-left-and-select {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .amount {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          p {
+            margin: 0px;
+          }
+
+          h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-right: 10px;
+          }
+        }
+
+        .select-reward-button {
+          background-color: var(--button-color);
+          border-radius: 33.5px;
+          border: 0px;
+          outline: none;
+          width: 160px;
+          height: 60px;
+          color: var(--nav-text-color);
+          font-weight: 700;
+        }
+
+        .select-reward-button:hover {
+          cursor: pointer;
+          filter: brightness(160%);
+        }
+      }
+
+      .plan {
+        border: 0.5px solid;
+        border-color: var(--border-color);
         border-radius: 8px;
+        margin-bottom: 25px;
+        padding-inline: 30px;
+      }
+
+      .out-of-stock {
+        border: 0px;
+        opacity: 0.3;
+        pointer-events: none;
+        .select-reward-button {
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:830px) {
+  body {
+    background-image: url(/images/image-hero-mobile.jpg);
+    background-size: 100% 18%;
+  }
+
+  .wrapper {
+    margin-top: 200px;
+
+    .back-project {
+      width: 90%;
+
+      .icon-wrapper {
+        width: 90%;
+      }
+    }
+
+    .numbers-and-bar {
+      margin-top: 25px;
+      width: 90%;
+    }
+
+    .about-and-plans {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and(max-width:670px) {
+  body {
+    background-image: url(/images/image-hero-mobile.jpg);
+    background-size: 100% 18%;
+  }
+
+  nav {
+    background: none;
+    .navigation {
+      display: none !important;
+    }
+
+    .burger-menu {
+      display: block;
+      background: none;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .drop-down-nav {
+    z-index: 20;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 90%
+    );
+
+    .option-wrapper {
+      width: 90%;
+      height: 200px;
+      border-radius: 8px;
+      background-color: var(--forms-bg-color);
+      box-sizing: border-box;
+      padding-inline: 20px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 66px;
+
+      p:first-of-type {
+        border: 0px;
+      }
+
+      p {
+        border-top: 0.1px solid;
+        border-color: var(--border-color);
+        margin: 0px;
+      }
+    }
+  }
+
+  .wrapper {
+    margin-top: 200px;
+
+    .back-project {
+      .intro-text-wrapper {
+        h1 {
+          font-size: 20px;
+          width: 100%;
+          box-sizing: border-box;
+          padding-inline: 40px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          box-sizing: border-box;
+          padding-inline: 20px;
+        }
+      }
+    }
+
+    .numbers-and-bar {
+      margin-top: 25px;
+      width: 90%;
+
+      .numbers {
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
-        padding-inline: 50px;
-        
-        .numbers{
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 10px;
-            text-align: center;
+
+        .backers {
+          border: 0px;
+          border-block: 0.1px solid;
+          border-color: var(--border-color);
+        }
+      }
+    }
+
+    .about-and-plans {
+      width: 90%;
+      padding: 20px;
+
+      .about-text {
+        h2 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+
+      .plans {
+        .plan-name-and-price {
+          display: block !important;
+
+          h2 {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .pieces-left-and-select {
+          display: block;
+
+          .amount {
+            display: flex;
+            flex-direction: row;
             align-items: center;
+            margin-left: 15px;
 
-            h1{
-                margin: 0px;
-                margin-top: 10px;
-                font-size: 32px;
-                line-height: 32px;
-                font-weight: 700;
+            p {
+              margin: 0px;
             }
+          }
 
-            p{
-                position: relative;
-                top: -5px;
-                font-size: 15px;
-                line-height: 15px;
-                font-weight: 400;
-                color: var(--faded-text-color);
-            }
-            
-            .backers{
-                border-inline: .5px solid;
-                border-color: var(--border-color);
-                height: 80px;
-            }
+          .select-reward-button {
+            margin-bottom: 0px;
+          }
         }
 
-        .progress-bar{
-          width: 100%;
-          height: 12px;
-          background-color: var(--background-color);
-          border-radius: 33.5px; 
-          margin-block: 30px;
-          
-          .progress-tracker{
-              width: 75%;
-              height: 100%;
-              background-color: var(--progress-tracker-and-pledge-color);
-              border-radius: 33.5px; 
-            }
+        .plan {
+          padding: 20px;
+          h2 {
+            margin-top: 0px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 0px;
+          }
         }
+      }
     }
-
-    .about-and-plans{
-        background-color: var(--forms-bg-color);
-        width: 730px;
-        margin-top: 25px;
-        margin-bottom: 50px;
-        border-radius: 8px;
-        box-sizing: border-box;
-        padding: 48px;
-
-        h2{
-            font-size: 25px;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        p{
-            margin-bottom: 30px;
-            font-size: 16px;
-            line-height: 30px;
-            color: var(--faded-text-color);
-        }
-
-        .plans{
-
-            .plan-name-and-price{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                
-                p{
-                    margin: 0px;
-                    color: var(--progress-tracker-and-pledge-color);
-                    font-weight: 500;
-                    font-size: 15px;
-                }
-            }
-
-            .pieces-left-and-select{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-
-                .amount{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-
-                    p{
-                        margin: 0px;
-                    }
-
-                    h1{
-                        font-size: 32px;
-                        font-weight: 700;
-                        margin-right: 10px;
-                    }
-                }
-
-                .select-reward-button{
-                    background-color: var(--button-color);
-                    border-radius: 33.5px;
-                    border: 0px;
-                    outline: none;
-                    width: 160px;
-                    height: 60px;
-                    color: var(--nav-text-color);
-                    font-weight: 700;
-                }
-
-                .select-reward-button:hover{
-                    cursor: pointer;
-                    filter: brightness(160%);
-                }
-
-                
-            }
-
-            .plan{
-                    border: .5px solid;
-                    border-color: var(--border-color);
-                    border-radius: 8px;
-                    margin-bottom: 25px;
-                    padding-inline: 30px;
-            }
-
-            .out-of-stock{
-                border: 0px;
-                opacity: 0.3;
-                pointer-events: none;
-                .select-reward-button{
-                    background-color: black;
-                }
-            }
-        }
-    }
-}
-
-.back-project-form{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    z-index: 300;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-
-    .paying-form{
-        background-color: var(--forms-bg-color);
-        margin-top: 100px;
-        width: 730px;
-        height: 1000px;
-        box-sizing: border-box;
-        padding: 40px;
-    }
-}
-
-.closed{
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and(max-width:830px){
-    body{
-        background-image: url(/images/image-hero-mobile.jpg);
-        background-size: 100% 18%;
-    }
-
-    .wrapper{
-        margin-top: 200px;
-    
-        .back-project{
-            width: 90%;
-            
-            .icon-wrapper{
-                width: 90%;
-            }
-        }
-    
-        .numbers-and-bar{
-            margin-top: 25px;
-            width: 90%;
-        }
-    
-        .about-and-plans{
-            width: 90%;
-        }  
-    }
-}
-
-
-
-
-
-
-
-
-
-
-@media screen and(max-width:670px){
-    body{
-        background-image: url(/images/image-hero-mobile.jpg);
-        background-size: 100% 18%;
-    }
-
-    nav{
-        background: none;
-        .navigation{
-            display: none !important;
-        }
-
-        .burger-menu{
-            display: block;
-            background: none;
-            border: none;
-            outline: none;
-        }
-    }
-
-    .drop-down-nav{
-        z-index: 20;
-        display: none;
-        justify-content: center;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: rgb(2,0,36);
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
-
-        .option-wrapper{
-            width: 90%;
-            height: 200px;
-            border-radius: 8px;
-            background-color: var(--forms-bg-color);
-            box-sizing: border-box;
-            padding-inline: 20px;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 66px;
-
-            p:first-of-type {
-                border: 0px;
-            }
-
-            p{
-                border-top: .1px solid;
-                border-color: var(--border-color);
-                margin: 0px;
-            }
-        }
-    }
-
-    .wrapper{
-        margin-top: 200px;
-
-        .back-project{
-            .intro-text-wrapper{
-                h1{
-                    font-size: 20px;
-                    width: 100%;
-                    box-sizing: border-box;
-                    padding-inline: 40px;
-                }
-
-                p{
-                    font-size: 14px;
-                    line-height: 24px;
-                    box-sizing: border-box;
-                    padding-inline: 20px;
-                }
-            }
-        }
-    
-        .numbers-and-bar{
-            margin-top: 25px;
-            width: 90%;
-
-            .numbers{
-               display: flex;
-               flex-direction: column;
-
-               .backers{
-                   border: 0px;
-                   border-block: .1px solid;
-                    border-color: var(--border-color);
-               }
-            }
-        }
-    
-        .about-and-plans{
-            width: 90%;
-            padding: 20px;
-
-            .about-text{
-                h2{
-                    font-size: 18px;
-                    line-height: 22px;
-                }
-
-                p{
-                    font-size: 14px;
-                    line-height: 24px;
-                }
-            }
-
-            .plans{
-                .plan-name-and-price{
-                    display: block !important;
-                    
-                    h2{
-                        font-size: 14px;
-                        line-height: 17px;
-                        margin-bottom: 5px;
-                    }
-
-                    p{
-                        font-size: 14px;
-                    }
-                }
-    
-                .pieces-left-and-select{
-                    display: block;
-    
-                    .amount{
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        margin-left: 15px;
-    
-                        p{
-                            margin: 0px;
-                        }
-                    }
-    
-                    .select-reward-button{
-                        margin-bottom: 0px;
-                    } 
-                }
-    
-                .plan{
-                    padding: 20px;
-                    h2{
-                        margin-top: 0px;
-                    }
-                    p{
-                        font-size: 14px;
-                        line-height: 24px;
-                        margin-bottom: 0px;
-                    }
-                }
-            }
-        }
-    }  
+  }
 }
